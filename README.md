@@ -49,3 +49,9 @@ Init appereance with races, roles (main, sub), age, weigth, heigth and biography
 
 
 ### Combat
+When combat begins players see kind of tokens (two kind) and the space where they can drag it
+  - when everyone spend their combat tokens, next round begins
+  - should be more optimise to gm because of multiple enemies (only high lvl difficulty should have them or gm can manage for who he gets tokens of combat)
+
+### NPC
+NPC should have rolling setting states depends on their difficulty

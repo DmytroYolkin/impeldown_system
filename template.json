@@ -11,12 +11,11 @@
                 "height": "",
                 "weigth": ""
             },
-            "name":"",
             "stat":{
                 "lvl": "Math.floor(1+Math.log2(@score/10))",
                 "score": 0
-            },
-            "fraction": ["Pirot","Marine","Revolutioner"]
+            }
+            
         },
 
         "Player-Character": {
@@ -31,7 +30,11 @@
                 "mastesy": []
             },
             "inventory":{
-
+                "containers": [],
+                "max_weight": 50,
+                "weapons": [],
+                "tools": [],
+                "other_items": []
             },
             "devil_fruit":{
 
@@ -42,10 +45,12 @@
                 
             
         },
+        
         "NPC":{
             "types":"NPC",
-            "templates": ["general", "fraction"],
-
+            "templates": ["general"],
+            "fraction": ["Pirot","Marine","Revolutioner"],
+            "difficulty": ["","","","",""],
             "description": ""
         }
 
@@ -64,11 +69,37 @@
             }
         },
 
+        "Role":{
+
+        },
+        
         "Race":{
             "templates": ["general"],
             "types": "Race"
+        },
+
+        "Consumable":{
+            "templates": ["general"]
+        },
+
+        "Equipment":{
+            "templates": ["general"]
+        },
+
+        "Tool":{
+            "templates": ["general"]
+        },
+
+        "Weapon":{
+            "templates": ["general"]
+        },
+
+        "Devil_Fruit":{
+
+        },
+        
+        "Arsenal":{
+            "description": ""
         }
-
-
     }
 }
