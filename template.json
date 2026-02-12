@@ -1,0 +1,54 @@
+{
+    "Actor": {
+        
+        "types":[
+            "Player-Character", "NPC"
+        ],
+        "templates":{
+            "general":{
+                "race": "",
+                "gender": "",
+                "height": "",
+                "weigth": ""
+            },
+            "fraction": ["Pirot","Marine","Revolutioner"]
+        },
+
+        "Player-Character": {
+            "types":"Player-Character",
+            "templates": ["general"],
+            
+            "age": ""
+            
+        },
+        "NPC":{
+            "types":"NPC",
+            "templates": ["general", "fraction"],
+
+            "description": ""
+        }
+
+    },
+
+    "Item": {
+        "types":[
+            "Race", "Item"
+        ],
+        "templates":{
+            "general":{
+                "description": ""
+            }
+        },
+
+        "Race":{
+            "templates": ["general"],
+            "types": "Race"
+        },
+        "Item":{
+            "templates": ["general"],
+            "types": "Item",
+            "quantity": ""
+        }
+
+    }
+}

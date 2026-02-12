@@ -1,0 +1,46 @@
+{
+  "id": "impel",
+  "title": "(Impel)down",
+  "description": "",
+  "authors": [
+    {
+      "name":"DeiDestiny"
+    }, 
+    {
+      "name":"Diminatorio"
+    }
+  ],
+  
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 13,
+    "verified": "13.351"
+  },
+  "esmodules": ["impel.js"], 
+  "styles": ["impel.css"],
+  
+  "socket": false,
+  "grid": {
+    "distance": 1,
+    "unites": "Meter"
+  },
+
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+
+  "media": [
+    {
+      "type": "setup",
+      "url": "",
+      "thumbnail": ""
+    }
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}
