@@ -55,3 +55,25 @@ When combat begins players see kind of tokens (two kind) and the space where the
 
 ### NPC
 NPC should have rolling setting states depends on their difficulty
+
+## Folder architecture (AI-GENERATED)
+
+Structure of files for Foundry VTT system:
+
+- **root**: Contains the main system definitions.
+  - `system.json`: The manifest file that defines the system, its version, authors, and compatibility.
+  - `template.json`: Defines the data model structure for Actors and Items.
+  - `impel.js`: The main entry point for the system's JavaScript.
+  - `impel.css`: The compiled CSS file used by the system.
+
+- **lang/**: Contains localization files.
+  - `en.json`: English translation strings.
+
+- **less/**: Contains source files for styling.
+  - `impel.less`: The main LESS file that probably imports other style files.
+  - `character-sheet.less`: Specific styles for the character sheet.
+
+- **modules/**: Contains JavaScript modules creating the system logic.
+  - `config.js`: Configuration constants and lists used throughout the system.
+  - `functions_ofSheets.js`: Functions specifically related to how sheets render or behave.
+  - `utils.js`: Helper functions used across the system.
