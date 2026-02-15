@@ -91,7 +91,9 @@
         },
 
         "Weapon":{
-            "templates": ["general"]
+            "templates": ["general"],
+            "type":"",
+            "mastey":""
         },
 
         "Devil_Fruit":{
