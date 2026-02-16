@@ -2,7 +2,7 @@
     "Actor": {
         
         "types":[
-            "Player-Character", "NPC"
+            "Player-Character", "NPC", "Guest", "Vehicle"
         ],
         "templates":{
             "general":{

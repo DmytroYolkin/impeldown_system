@@ -19,15 +19,32 @@ Contains stats, mastery, devil fruit (Null as default), wounds checkbox, skills 
   - mastery should contain lvl and score the same as stat
   - we should be able to choose between arsenal and mastery. Where arsenal can have inside of it a sheet with description
 
-  **Wounds** checkboxes with different lvls (5 light, 3 medium, 1 hard and one to unconscious)
-  - when unconsious character will throw a coin where 0 lose, 1 win as best of 5 (every round unconscious)
-
   **Devil Fruit** is just a stat same as mastery
   - when you create it you get page as part of character sheet
 
+  **Boounty** will also appear somewhere under portrait with nickname
+  
+  ###### How it will look like
+  - ***Token***, ***Bounty*** and ***Debuffs*** wil be in a sidebar on the left. From up to down in order
+  (only names of debuffs without description)
+  - ***Stats*** will appear in upper part of sheet for now only basic stats (Maybe ***Devil Fruit*** as well)
+  - ***Mastery*** below stats can be in columns and a row (maybe sorted by type)
+
+#### Combat tab
+  **Wounds** checkboxes with different lvls (5 light, 3 medium, 1 hard and one to unconscious)
+  - when unconsious character will throw a coin where 0 lose, 1 win as best of 5 (every round unconscious)
+
   **Skill** is an kind of item that will appear in the list so when you click on it, it will shows description
 
-  **Boounty** will also appear somewhere under portrait with nickname
+  **Favs** is kind of favorite or most used items from inventory
+
+  **Debuffs** can be illness, sickness, major wound and so on
+
+  ###### How it will look like
+  - On side bar still ***Token*** and below it ***Wounds*** 
+  - We will split to 3 section from up to down in following order:
+  ***Favs*** > ***Debuffs*** > ***Skills***
+  - ***Skills*** will be displayed simarly as ***Mastery*** in main
 
 #### Inventory
 In Inventory page we could see spot to mention in what we have our stuff.
@@ -43,6 +60,11 @@ If in main page stat devil fruit not null
 #### Biography
 Init appereance with races, roles (main, sub), age, weigth, heigth and biography
   - in future would be good to change parts of style sheet depends on main role
+
+#### Guest
+
+### Verhicles
+ACtor of ship where we will have omvemtory, ship state and what rooms we have
 
 ### Items
 
