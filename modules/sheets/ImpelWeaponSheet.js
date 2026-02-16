@@ -1,5 +1,5 @@
-export default class ImpelWeaponSheet extends WeaponSheet {
-    get template(){
-        return `system/impel/templates/sheets/${this.item.data.type}-sheet.html`
+export default class ImpelWeaponSheet extends ItemSheet {
+    get template() {
+        return `systems/impel/templates/sheets/${this.item.type}-sheet.hbs`;
     }
 }
