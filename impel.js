@@ -1,4 +1,5 @@
 import { IMPEL } from "./modules/config.js"
+import ImpelWeaponSheet from "./modules/sheets/ImpelWeaponSheet.js";
 
 //#region Initialization
 Hooks.once("init", async () => {
@@ -10,7 +11,8 @@ Hooks.once("init", async () => {
     CONFIG.INIT = true;
 
     // Unregister default templates
-    // Items.unregisterSheet("core", ItemSheet);
+    Items.unregisterSheet("core", ItemSheet);
+    Items.registerSheet("impel", ImpelWeaponSheet, { makeDefault: true });
     // Actors.unregisterSheet("core", ActorSheet)
     
     //Partial-Handlebar load
