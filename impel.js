@@ -1,5 +1,7 @@
 import { IMPEL } from "./modules/config.js"
-import ImpelWeaponSheet from "./modules/sheets/ImpelWeaponSheet.js";
+import impelActor from "./modules/objects/impelActor.js";
+import impelCharacterSheet from "./modules/sheets/ImpelCharacterSheet.js";
+import impelWeaponSheet from "./modules/sheets/ImpelWeaponSheet.js";
 
 //#region Initialization
 Hooks.once("init", async () => {
@@ -9,12 +11,18 @@ Hooks.once("init", async () => {
     //Global Configuration Object Setup
     CONFIG.IMPEL = IMPEL;
     CONFIG.INIT = true;
+    CONFIG.Actor.documentClass = impelActor;
 
     // Unregister default templates
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("impel", ImpelWeaponSheet, { makeDefault: true });
     // Actors.unregisterSheet("core", ActorSheet)
     
+    const DocumentSheetConfig = foundry.aplications.apps.DocumentSheetConfig;
+    DocumentSheetConfig.unregisterSheet(Actor, "core", foundry.appv1.sheets.ActorSheet);
+    DocumentSheetConfig.registerSheet(Actor, "impel", impelCharacterSheet, { types: ["character"], makeDefault: true, label: "IMPEL.SheetClassCharacter"})
+
+
     //Partial-Handlebar load
     preloadHandlebarsTemplates();
 
@@ -37,7 +45,13 @@ function preloadHandlebarsTemplates() {
 
     const templatePaths = [
         //Paths of partials templates
-        // "systems/impel/templates/partials/template.hbs"
+        
+        "systems/impel/templates/partials/character-sheet-main.hbs",
+        "systems/impel/templates/partials/character-sheet-combat.hbs",
+        "systems/impel/templates/partials/character-sheet-devilFruit.hbs",
+        "systems/impel/templates/partials/character-sheet-inventory.hbs",
+        "systems/impel/templates/partials/character-sheet-biography.hbs",
+
     ]
 
     return loadTemplates(templatePaths)
@@ -84,6 +98,11 @@ function registerHandlebarsHelpers() {
         if (value == 0 || value == "0") return true;
         if (value == null || values == "") return false;
         return true;
+    });
+
+    Handlebars.registerHelper("filterItemsByType", function(items, type) {
+        if (!items || !Array.isArray(items)) return [];
+        return items.filter(item => item.type === type);
     });
 };
 //#endregion

@@ -21,12 +21,60 @@
         "Player-Character": {
             "types":"Player-Character",
             "main":{
+                "lvl": 0,
+                "bounty":{
+                    "known_as": "",
+                    "condition": "Dead or Alive",
+                    "award": 0.0
+                },
                 "attributes":{
+                    "Resistent":{
+                        "templates":["stat"]
+                    },
+                    "Strength":{
+                        "templates":["stat"]
+                    },
+                    "Agility":{
+                        "templates":["stat"]
+                    },
                     "End":{
                         "templates":["stat"]
+                    },
+                    "Intelegence":{
+                        "templates":["stat"]
+                    },
+                    "Will":{
+                        "state": false,
+                        "Conquerer":{
+                            "state": false,
+                            "templates":["stat"]
+                        },
+                        "Arrmoment":{
+                            "templates":["stat"]
+                        },
+                        "Observation":{
+                            "templates":["stat"]
+                        }
+                    },
+                    "Devil_Fruit":{
+                        "eaten": false,
+                        "templates":["stat"] 
                     }
                 },
-                "mastesy": []
+                "total_mastery": {
+                    "templates": ["stat"]
+                },
+                "mastery": [],
+                "debuffs": []
+            },
+            "battle":{ 
+                "speed": 0,
+                "wounds": 0,
+                "K.O.": false,
+                "death_saves": 0,
+                "favs": [],
+                "debuffs": [],
+                "skills": []
             },
             "inventory":{
                 "containers": [],
@@ -36,10 +84,15 @@
                 "other_items": []
             },
             "devil_fruit":{
-
+                "templates": ["stat"],
+                "description": "",
+                "skills": []
             },
             "Biography":{
-                "templates":["general"]
+                "templates":["general"],
+                "home_ocean": "",
+                "appeareance": "",
+                "biography": ""
             }
                 
             
@@ -51,7 +104,10 @@
             "fraction": ["Pirot","Marine","Revolutioner"],
             "difficulty": ["","","","",""],
             "description": ""
-        }
+        },
+
+        "Guest":{},
+        "Vehicle":{}
 
     },
 
@@ -69,7 +125,8 @@
         },
 
         "Role":{
-
+            "banner": "",
+            "role_pack_mastery": []
         },
         
         "Race":{

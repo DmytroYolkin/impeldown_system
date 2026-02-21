@@ -1,0 +1,33 @@
+<div class="headerBox">
+
+    <div class="logoBox">
+        {{!-- just from tutorial --}}
+        <div class="logoImg"><div class="logoText"></div></div> 
+    </div>
+
+    <div class="charInfoBox">
+        <input class="bigInputText" type="text" name="name" value=""{{actor.name}}>
+        <div class="lvlBox">
+            <div class="lvlValue"></div>
+        </div>
+        <div class="char-Primary-Role">
+            <label>Primary Role</label>
+            <select name="system.primary_role" data-type="role">
+                <option value="">Select Role</option>
+                {{#each (filterItemsByType actor.items "Role")}}
+                    <option value="{{this.id}}" data-item-id="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="char-Secondary-Role">
+            <label>Secondary Role</label>
+            <select name="system.secondary_role" data-type="role">
+                <option value="">Select Role</option>
+                {{#each (filterItemsByType actor.items "Role")}}
+                    <option value="{{this.id}}" data-item-id="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+
+</div>
